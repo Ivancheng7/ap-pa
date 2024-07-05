@@ -1,0 +1,15 @@
+pip install mmcv-full==1.5.0 -f https://download.openmmlab.com/mmcv/dist/cu113/torch1.11.0/index.html
+
+conda install pytorch==1.11.0 torchvision==0.12.0 torchaudio==0.11.0 cudatoolkit=11.3 -c pytorch
+
+
+
+unzip /root/autodl-pub/DOTA/train/images/part3.zip
+unzip /root/autodl-pub/DOTA/train/labelTxt-v1.0/Train_Task2_gt.zip
+
+unzip /root/autodl-pub/DOTA/val/images/part1.zip
+
+python DOTA2COCO_rotated.py
+
+
+HF_ENDPOINT=https://hf-mirror.com python py.py
